@@ -27,9 +27,9 @@ So i can organise similar bookmarks together,\
 I'd like to be able to tag bookmarks into categories. 
 
 As a user\
-So i can find a specific bookmark i need,\ 
+So i can find a specific bookmark i need\ 
 I would like to filter bookmarks by tag. 
 
 As a user\
-So my bookmarks can't be changed by someone else,\ 
+So my bookmarks can't be changed by someone else\ 
 I'd would like if users could only manage their own bookmarks
