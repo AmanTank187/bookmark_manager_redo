@@ -2,8 +2,8 @@
 
 ## User Stories 
 
-As a user 
-So i can go to sites quickly,
+As a user\
+So i can go to sites quickly,\
 I would like to see a list of bookmarks. 
 
 As a user 
