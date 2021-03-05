@@ -53,6 +53,10 @@ class Bookmark
           )
       end 
 
+      def comments 
+        DatabaseConnection.query("SELECT * FROM comments WHERE bookmark_id = #{id};")
+      end 
+
       private 
 
       def self.is_url?(url)
