@@ -53,6 +53,15 @@ class BookmarkManager < Sinatra::Base
         Comment.create(text: params[:comment], bookmark_id: params[:id])
         redirect '/bookmarks'
       end
+
+      get '/users/new' do
+        erb :"users/new"
+      end
+      
+      post '/users' do
+        User.create(email: params[:email], password: params[:password])
+        redirect '/bookmarks'
+      end
     
 
     run! if app_file == $0 
