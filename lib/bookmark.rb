@@ -12,7 +12,7 @@ class Bookmark
     end
 
     def self.all
-      result = DatabaseConnection.query("SELECT * FROM bookmarks")
+      result = DatabaseConnection.query("SELECT * FROM bookmarks;")
       result.map do |bookmark|
         Bookmark.new(
           url: bookmark['url'],
