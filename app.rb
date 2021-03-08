@@ -2,6 +2,7 @@ require 'sinatra/base'
 require './lib/bookmark'
 require './database_connection_setup'
 require 'sinatra/flash'
+require_relative './lib/comment'
 
 
 class BookmarkManager < Sinatra::Base 

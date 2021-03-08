@@ -1,5 +1,6 @@
 require_relative 'database_connection'
 require 'uri'
+require_relative './comment.rb'
 
 class Bookmark 
     attr_reader :id, :title, :url
@@ -53,8 +54,8 @@ class Bookmark
           )
       end 
 
-      def comments 
-        DatabaseConnection.query("SELECT * FROM comments WHERE bookmark_id = #{id};")
+      def comments(comment_class = Comment)
+        comment_class.where(bookmark_id: id)
       end 
 
       private 
