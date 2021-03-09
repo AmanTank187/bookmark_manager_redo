@@ -18,8 +18,12 @@ class BookmarkManager < Sinatra::Base
     get '/bookmarks' do
       # Fetch the user from the database, using an ID stored in the session
       @user = User.find(session[:user_id])
-      @bookmarks = Bookmark.all
-      erb :"bookmarks/index"  
+      if @user
+        @bookmarks = Bookmark.all
+        erb :"bookmarks/index" 
+      else 
+        redirect '/' 
+      end 
     end
 
     get '/bookmarks/new' do
